@@ -79,49 +79,6 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8 flex flex-col items-center">
           <h1 className="text-4xl font-extrabold text-stone-800 mb-8 text-center tracking-wide drop-shadow-sm">Our Collection</h1>
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-lg font-bold tracking-widest">MEN</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="bg-white p-4 rounded-xl shadow-lg min-w-[200px]">
-                    <ul className="space-y-2">
-                      <li><NavigationMenuLink href="/products?category=Men&type=T-shirt">T-shirt</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Men&type=Pants">Pants</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Men&type=Jacket">Jacket</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Men&type=Outfit">Outfit</NavigationMenuLink></li>
-                    </ul>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-lg font-bold tracking-widest">WOMEN</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="bg-white p-4 rounded-xl shadow-lg min-w-[200px]">
-                    <ul className="space-y-2">
-                      <li><NavigationMenuLink href="/products?category=Women&type=T-shirt">T-shirt</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Women&type=Pants">Pants</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Women&type=Jacket">Jacket</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Women&type=Outfit">Outfit</NavigationMenuLink></li>
-                    </ul>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-lg font-bold tracking-widest">KIDS</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="bg-white p-4 rounded-xl shadow-lg min-w-[200px]">
-                    <ul className="space-y-2">
-                      <li><NavigationMenuLink href="/products?category=Kids&type=T-shirt">T-shirt</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Kids&type=Pants">Pants</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Kids&type=Jacket">Jacket</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/products?category=Kids&type=Outfit">Outfit</NavigationMenuLink></li>
-                    </ul>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
         </div>
 
         {filteredAndSortedProducts.length === 0 ? (
