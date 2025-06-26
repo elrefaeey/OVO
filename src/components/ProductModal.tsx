@@ -15,8 +15,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
   const [selectedSizes, setSelectedSizes] = useState<string[]>(['']);
   const { addItem } = useCart();
 
-  if (!isOpen || !product) return null;
-
   useEffect(() => {
     setSelectedSizes((prev) => {
       if (quantity > prev.length) {
@@ -27,6 +25,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
       return prev;
     });
   }, [quantity]);
+
+  if (!isOpen || !product) return null;
 
   const handleAddToCart = () => {
     if (selectedSizes.some(size => !size)) {

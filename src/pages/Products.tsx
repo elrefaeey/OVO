@@ -79,6 +79,26 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8 flex flex-col items-center">
           <h1 className="text-4xl font-extrabold text-stone-800 mb-8 text-center tracking-wide drop-shadow-sm">Our Collection</h1>
+          <div className="flex gap-4 mb-4">
+            <button
+              className={`px-6 py-2 rounded-lg font-bold text-lg border transition-colors ${filters.category === 'Men' ? 'bg-stone-100 text-stone-900 border-stone-200' : 'bg-white text-stone-900 border-stone-200 hover:bg-stone-50'}`}
+              onClick={() => setFilters(prev => ({ ...prev, category: 'Men', type: '' }))}
+            >
+              MEN
+            </button>
+            <button
+              className={`px-6 py-2 rounded-lg font-bold text-lg border transition-colors ${filters.category === 'Women' ? 'bg-stone-100 text-stone-900 border-stone-200' : 'bg-white text-stone-900 border-stone-200 hover:bg-stone-50'}`}
+              onClick={() => setFilters(prev => ({ ...prev, category: 'Women', type: '' }))}
+            >
+              WOMEN
+            </button>
+            <button
+              className={`px-6 py-2 rounded-lg font-bold text-lg border transition-colors ${filters.category === 'Kids' ? 'bg-stone-100 text-stone-900 border-stone-200' : 'bg-white text-stone-900 border-stone-200 hover:bg-stone-50'}`}
+              onClick={() => setFilters(prev => ({ ...prev, category: 'Kids', type: '' }))}
+            >
+              KIDS
+            </button>
+          </div>
         </div>
 
         {filteredAndSortedProducts.length === 0 ? (
